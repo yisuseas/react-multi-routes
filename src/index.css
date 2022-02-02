@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .blue-wave {
+    background-image: url("./img/WaveDivider001.svg");
+  }
+}
+
+@layer utilities {
+  .container-res {
+    @apply w-4/5 md:w-3/4;
+  }
+}

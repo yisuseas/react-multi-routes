@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="visual"
+   viewBox="0 0 900 450"
+   width="900"
+   height="450"
+   version="1.1"
+   sodipodi:docname="WaveDivider001.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata11">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs9" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     id="namedview7"
+     showgrid="false"
+     inkscape:zoom="1.1732672"
+     inkscape:cx="444.37869"
+     inkscape:cy="285.57323"
+     inkscape:window-x="-8"
+     inkscape:window-y="22"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="visual" />
+  <rect
+     x="0"
+     y="0"
+     width="900"
+     height="450"
+     fill="#002233"
+     id="rect2" />
+  <path
+     d="M 0,212.05238 37.5,181.79165 C 75,151.78956 150,91.268099 225,85.319419 c 75,-5.948693 150,42.158101 225,100.869101 75,58.71098 150,127.50888 225,133.7162 75,5.9487 150,-50.95182 187.5,-79.40208 L 900,212.05238 V 450 h -37.5 c -37.5,0 -112.5,0 -187.5,0 -75,0 -150,0 -225,0 -75,0 -150,0 -225,0 -75,0 -150,0 -187.5,0 H 0 Z"
+     fill="#0066ff"
+     stroke-linecap="round"
+     stroke-linejoin="miter"
+     id="path4"
+     style="stroke-width:1.60823" />
+</svg>

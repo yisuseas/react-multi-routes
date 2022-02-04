@@ -11,7 +11,7 @@ function App() {
   return (
     <Fragment>
       <Navbar />
-      <main className="w-full mt-32 md:mt-24 mb-10">
+      <main className="w-full mt-32 md:mt-24">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />

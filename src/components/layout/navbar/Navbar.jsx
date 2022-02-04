@@ -17,14 +17,17 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 w-full font-display text-3xl md:text-xl text-white bg-black">
+    <nav className="fixed top-0 z-[100] w-full font-display text-3xl md:text-xl text-white bg-black">
       <div
         className={
           "mx-auto container-res py-6 md:py-4 " +
           "grid grid-flow-row grid-cols-6 gap-0 "
         }
       >
-        <NavToggler onClick={() => toggleNavbar()} open={open} />
+        {/* Nav Toggle */}
+        <div className="flex md:hidden order-first col-span-1 items-center">
+          <NavToggler onClick={() => toggleNavbar()} open={open} />
+        </div>
         {/* Brand */}
         <div
           className={

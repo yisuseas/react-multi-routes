@@ -1,6 +1,7 @@
 import React from "react";
 import { useSpring, animated, config } from "react-spring";
 
+/** Displays and svg of a Burger Menu or an X based on the value of a boolean isCross prop, animates on change */
 function BurgerCross(props) {
   const { isCross } = props;
   const { stage } = useSpring({
@@ -13,11 +14,9 @@ function BurgerCross(props) {
       width="30"
       height="30"
       viewBox="0 0 7.9374998 7.9375002"
-      version="1.1"
-      id="svg8"
+      className="menu-svg"
     >
       <animated.path
-        className="menu-svg-path"
         d={stage.to({
           range: [0, 50, 100],
           output: [
@@ -28,7 +27,6 @@ function BurgerCross(props) {
         })}
       />
       <animated.path
-        className="menu-svg-path"
         d={stage.to({
           range: [0, 50, 100],
           output: [
@@ -39,7 +37,6 @@ function BurgerCross(props) {
         })}
       />
       <animated.path
-        className="menu-svg-path"
         d={stage.to({
           range: [0, 50, 100],
           output: [
@@ -56,18 +53,16 @@ function BurgerCross(props) {
 function NavToggler(props) {
   const { open, onClick } = props;
 
-  const icon = <BurgerCross isCross={open} />;
-
   return (
-    <div className="flex md:hidden order-first col-span-1 items-center">
-      <button
-        id="navbar-trigger"
-        onClick={onClick}
-        className={"navbar-icon transition-colors text-white"}
-      >
-        {icon}
-      </button>
-    </div>
+    <button
+      id="navbar-trigger"
+      onClick={onClick}
+      className={"navbar-icon transition-colors text-white"}
+      aria-expanded={open}
+      aria-label="Toggle Navbar"
+    >
+      <BurgerCross isCross={open} />
+    </button>
   );
 }
 

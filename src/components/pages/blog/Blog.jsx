@@ -1,91 +1,46 @@
 import React from "react";
+import BlogSection from "./BlogSection";
 
 function Blog() {
   return (
     <article className="w-full">
-      <section className="prose container">
-        <h1>This is a title</h1>
-        <h2>This is a subtitle</h2>
+      <BlogSection color="transparent" isFirst>
+        <h1>This is a blog entry</h1>
+        <h2>Another Subtitle</h2>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
-          pariatur debitis perspiciatis, id totam deleniti labore necessitatibus
-          hic ipsam autem consectetur similique eius omnis aut porro alias, est
-          doloribus vero.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+          similique, dolorum dicta autem saepe velit magni quae dolore ratione
+          in, eligendi minima ullam omnis adipisci reprehenderit facere laborum
+          libero nihil.
         </p>
-      </section>
-      <div className="aspect-[4/1] w-full bg-no-repeat bg-center bg-cover blue-wave"></div>
-      <section className="prose">
-        <h2>This is a subtitle</h2>
+      </BlogSection>
+      <BlogSection color="red-300">
+        <h2>Another Subtitle</h2>
         <p>
-          Facilis perspiciatis corrupti facere, recusandae harum sequi culpa,
-          cumque illo ducimus earum beatae saepe ea reiciendis pariatur
-          voluptate autem explicabo vitae excepturi debitis. Ipsum, eius
-          repellendus ut nulla corrupti optio.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+          similique, dolorum dicta autem saepe velit magni quae dolore ratione
+          in, eligendi minima ullam omnis adipisci reprehenderit facere laborum
+          libero nihil.
         </p>
-      </section>
-      <section className="prose">
-        <h2>This is a subtitle</h2>
+      </BlogSection>
+      <BlogSection color="blue-300">
+        <h2>Another Subtitle</h2>
         <p>
-          Facilis perspiciatis corrupti facere, recusandae harum sequi culpa,
-          cumque illo ducimus earum beatae saepe ea reiciendis pariatur
-          voluptate autem explicabo vitae excepturi debitis. Ipsum, eius
-          repellendus ut nulla corrupti optio.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+          similique, dolorum dicta autem saepe velit magni quae dolore ratione
+          in, eligendi minima ullam omnis adipisci reprehenderit facere laborum
+          libero nihil.
         </p>
-      </section>
-      <section className="prose">
-        <h2>This is a subtitle</h2>
+      </BlogSection>
+      <BlogSection color="gold-300">
+        <h2>Another Subtitle</h2>
         <p>
-          Facilis perspiciatis corrupti facere, recusandae harum sequi culpa,
-          cumque illo ducimus earum beatae saepe ea reiciendis pariatur
-          voluptate autem explicabo vitae excepturi debitis. Ipsum, eius
-          repellendus ut nulla corrupti optio.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+          similique, dolorum dicta autem saepe velit magni quae dolore ratione
+          in, eligendi minima ullam omnis adipisci reprehenderit facere laborum
+          libero nihil.
         </p>
-      </section>
-      <section className="prose">
-        <h2>This is a subtitle</h2>
-        <p>
-          Facilis perspiciatis corrupti facere, recusandae harum sequi culpa,
-          cumque illo ducimus earum beatae saepe ea reiciendis pariatur
-          voluptate autem explicabo vitae excepturi debitis. Ipsum, eius
-          repellendus ut nulla corrupti optio.
-        </p>
-      </section>
-      <section className="prose">
-        <h2>This is a subtitle</h2>
-        <p>
-          Facilis perspiciatis corrupti facere, recusandae harum sequi culpa,
-          cumque illo ducimus earum beatae saepe ea reiciendis pariatur
-          voluptate autem explicabo vitae excepturi debitis. Ipsum, eius
-          repellendus ut nulla corrupti optio.
-        </p>
-      </section>
-      <section className="prose">
-        <h2>This is a subtitle</h2>
-        <p>
-          Facilis perspiciatis corrupti facere, recusandae harum sequi culpa,
-          cumque illo ducimus earum beatae saepe ea reiciendis pariatur
-          voluptate autem explicabo vitae excepturi debitis. Ipsum, eius
-          repellendus ut nulla corrupti optio.
-        </p>
-      </section>
-      <section className="prose">
-        <h2>This is a subtitle</h2>
-        <p>
-          Facilis perspiciatis corrupti facere, recusandae harum sequi culpa,
-          cumque illo ducimus earum beatae saepe ea reiciendis pariatur
-          voluptate autem explicabo vitae excepturi debitis. Ipsum, eius
-          repellendus ut nulla corrupti optio.
-        </p>
-      </section>
-      <section className="prose">
-        <h2>This is a subtitle</h2>
-        <p>
-          Facilis perspiciatis corrupti facere, recusandae harum sequi culpa,
-          cumque illo ducimus earum beatae saepe ea reiciendis pariatur
-          voluptate autem explicabo vitae excepturi debitis. Ipsum, eius
-          repellendus ut nulla corrupti optio.
-        </p>
-      </section>
+      </BlogSection>
     </article>
   );
 }

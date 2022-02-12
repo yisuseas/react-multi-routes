@@ -43,7 +43,9 @@ function BlogSection(props) {
     <div className="w-full static">
       <section className={`w-ful pt-4 pb-[5%] relative`} style={secStyle}>
         {waveOrNot}
-        <div className="prose mx-auto ">{children}</div>
+        <div className="prose prose-h1:font-display prose-h2:font-enfasis prose-p:font-body lg:prose-lg px-2 mx-auto ">
+          {children}
+        </div>
       </section>
     </div>
   );

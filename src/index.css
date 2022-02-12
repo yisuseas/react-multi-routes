@@ -13,6 +13,31 @@
     stroke-dasharray: none;
     stroke-opacity: 1;
   }
+  .btn {
+    @apply py-1 px-2
+    rounded-lg
+    shadow-md
+    font-semibold
+    text-center
+    hover:rounded-md
+    focus:outline-none
+    focus:ring-2
+    focus:ring-opacity-75
+    transition
+    duration-300;
+  }
+  .btn-coral {
+    @apply text-white
+    bg-coral-400
+    hover:bg-coral-500
+    focus:ring-coral-300;
+  }
+  .btn-leaf {
+    @apply text-white
+    bg-leaf-400
+    hover:bg-leaf-500
+    focus:ring-leaf-300;
+  }
 }
 
 @layer utilities {

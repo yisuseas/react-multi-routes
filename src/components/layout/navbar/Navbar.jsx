@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 
 import NavToggler from "./NavToggler";
 import NavLink from "./NavLink";
-import NavBtn from "./NavBtn";
+import CartBtn from "./CartBtn";
+// import NavBtn from "./NavBtn";
 
 import Logo from "../../elements/Logo";
 
-function Navbar() {
+function Navbar(props) {
+  const { cartTotal } = props;
+
   const [open, setOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -62,11 +65,11 @@ function Navbar() {
             }
             open={open}
           >
-            <NavLink onClick={() => handleClick()} to="/">
-              Home
-            </NavLink>
             <NavLink onClick={() => handleClick()} to="about">
               About
+            </NavLink>
+            <NavLink onClick={() => handleClick()} to="products">
+              Products
             </NavLink>
             <NavLink onClick={() => handleClick()} to="blog">
               Blog
@@ -80,12 +83,10 @@ function Navbar() {
             "items-center justify-end gap-6 "
           }
         >
-          <NavBtn extraClass="hidden lg:block ">
+          <button className="hidden lg:block ">
             <i className="fas fa-search"></i>
-          </NavBtn>
-          <NavBtn>
-            <i className="fas fa-shopping-cart "></i>
-          </NavBtn>
+          </button>
+          <CartBtn total={cartTotal} />
         </div>
       </div>
     </nav>

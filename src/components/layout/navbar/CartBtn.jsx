@@ -34,9 +34,9 @@ function Cart() {
 }
 
 function CartBtn(props) {
-  const { total } = props;
+  const { total, onClick } = props;
   return (
-    <button className="relative ">
+    <button onClick={onClick} className="relative ">
       <Cart />
       <span
         className={

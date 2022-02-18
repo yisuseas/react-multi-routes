@@ -4,12 +4,11 @@ import { Link } from "react-router-dom";
 import NavToggler from "./NavToggler";
 import NavLink from "./NavLink";
 import CartBtn from "./CartBtn";
-// import NavBtn from "./NavBtn";
 
 import Logo from "../../elements/Logo";
 
 function Navbar(props) {
-  const { cartTotal } = props;
+  const { cartTotal, toggleCartSideBar, closeCartSideBar } = props;
 
   const [open, setOpen] = useState(false);
 
@@ -19,6 +18,7 @@ function Navbar(props) {
 
   const handleClick = () => {
     setOpen(false);
+    closeCartSideBar();
   };
 
   return (
@@ -86,7 +86,7 @@ function Navbar(props) {
           <button className="hidden lg:block ">
             <i className="fas fa-search"></i>
           </button>
-          <CartBtn total={cartTotal} />
+          <CartBtn total={cartTotal} onClick={() => toggleCartSideBar()} />
         </div>
       </div>
     </nav>

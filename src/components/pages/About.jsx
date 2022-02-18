@@ -1,5 +1,4 @@
 import React from "react";
-import ContRes from "../elements/ContRes";
 import { palette } from "../elements/Palette";
 import Wave from "../elements/Wave";
 
@@ -18,7 +17,7 @@ function AboutSection(props) {
     <div className="w-full static">
       <section className="w-ful pt-4 pb-[5%] relative" style={secStyle}>
         {waveOrNot}
-        <ContRes>
+        <div className="container-res mx-auto">
           <div className="grid grid-flow-row grid-cols-1 lg:grid-cols-2">
             <div
               className={
@@ -30,7 +29,7 @@ function AboutSection(props) {
             </div>
             {img}
           </div>
-        </ContRes>
+        </div>
       </section>
     </div>
   );

@@ -9,32 +9,11 @@ import { Blog } from "./pages/blog";
 import BackToTop from "./layout/BackToTop";
 import Cart from "./layout/cart/Cart";
 
+import { products } from "../test_response/products";
+
 function App() {
   const [cart, setCart] = useState({});
   const [cartTotal, setCartTotal] = useState(0);
-
-  const all_products = {
-    0: {
-      title: "product zero",
-      price: "0001",
-    },
-    1: {
-      title: "product one",
-      price: "1000",
-    },
-    2: {
-      title: "product two",
-      price: "2000",
-    },
-    3: {
-      title: "product three",
-      price: "3000",
-    },
-    4: {
-      title: "product four",
-      price: "4000",
-    },
-  };
 
   const incCartQuant = (id) => {
     const cart_copy = { ...cart };
@@ -95,7 +74,7 @@ function App() {
             path="products"
             element={
               <ProductList
-                all_products={all_products}
+                all_products={products}
                 handleDelete={(id) => handleDelete(id)}
                 incCartQuant={(id) => incCartQuant(id)}
                 decCartQuant={(id) => decCartQuant(id)}
@@ -109,7 +88,7 @@ function App() {
       <Cart
         open={cartSideBar}
         cart={cart}
-        all_products={all_products}
+        all_products={products}
         handleDelete={(id) => handleDelete(id)}
         incCartQuant={(id) => incCartQuant(id)}
         decCartQuant={(id) => decCartQuant(id)}

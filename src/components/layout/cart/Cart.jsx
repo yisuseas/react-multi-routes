@@ -7,23 +7,25 @@ function Cart(props) {
   const { open, cart, all_products } = props;
   const { incCartQuant, decCartQuant, handleDelete } = props;
 
-  const renderProduct = (id) => {
+  const renderProduct = (cart_id) => {
+    // Find product in array of objects:
+    const product = all_products.find((p) => p.id === parseInt(cart_id));
+
     return (
       <CartProduct
-        key={id}
-        title={all_products[id].title}
-        price={all_products[id].price}
-        total={cart[id]}
-        handleDelete={() => handleDelete(id)}
-        incCartQuant={() => incCartQuant(id)}
-        decCartQuant={() => decCartQuant(id)}
+        key={cart_id}
+        product={product}
+        total={cart[cart_id]}
+        handleDelete={() => handleDelete(cart_id)}
+        incCartQuant={() => incCartQuant(cart_id)}
+        decCartQuant={() => decCartQuant(cart_id)}
       />
     );
   };
 
   const cart_list = [];
-  for (const id in cart) {
-    cart_list.push(renderProduct(id));
+  for (const cart_id in cart) {
+    cart_list.push(renderProduct(cart_id));
   }
 
   return (

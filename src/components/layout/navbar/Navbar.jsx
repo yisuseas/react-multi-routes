@@ -66,10 +66,10 @@ function Navbar(props) {
             open={open}
           >
             <NavLink onClick={() => handleClick()} to="about">
-              About
+              Acerca
             </NavLink>
             <NavLink onClick={() => handleClick()} to="products">
-              Products
+              Productos
             </NavLink>
             <NavLink onClick={() => handleClick()} to="blog">
               Blog

@@ -2,22 +2,16 @@ import React from "react";
 import Currency from "../elements/Currency";
 
 function Product(props) {
-  const { incCartQuant, decCartQuant, handleDelete } = props;
+  const { incCartQuant } = props;
   const { title, price, image } = props.product;
 
   return (
     <li className="flex flex-col gap-2 ">
-      {/* <button className="btn btn-coral" onClick={handleDelete}>
-        <i className="fas fa-times"></i>
-      </button> */}
       <h2 className="mx-auto font-enfasis font-extrabold text-lg">{title}</h2>
       <img src={image} alt={title} srcSet="" className={"w-full"} />
       <div className="text-center">
         <Currency>{price}</Currency>
       </div>
-      {/* <button className="btn btn-coral" onClick={decCartQuant}>
-        <i className="fas fa-minus"></i>
-      </button> */}
       <button className="btn btn-leaf" onClick={incCartQuant}>
         Agregar al carrito
       </button>

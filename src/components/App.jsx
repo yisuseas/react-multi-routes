@@ -3,13 +3,17 @@ import { Routes, Route } from "react-router-dom";
 import { Fragment } from "react/cjs/react.production.min";
 
 import Navbar from "./layout/navbar/Navbar";
-import Footer from "./layout/Footer";
-import { Home, About, ProductList } from "./pages";
-import { Blog } from "./pages/blog";
 import BackToTop from "./layout/BackToTop";
 import Cart from "./layout/cart/Cart";
+import Footer from "./layout/Footer";
 
 import { products } from "../test_response/products";
+import LoadingSign from "./elements/LoadingSign";
+
+import Home from "./pages/Home";
+const About = React.lazy(() => import("./pages/About"));
+const ProductList = React.lazy(() => import("./pages/ProductList"));
+const Blog = React.lazy(() => import("./pages/blog/Blog"));
 
 function App() {
   const [cart, setCart] = useState({});
@@ -69,20 +73,36 @@ function App() {
       <main className="w-full mt-32 lg:mt-24">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="about" element={<About />} />
+          <Route
+            path="about"
+            element={
+              <React.Suspense fallback={<LoadingSign />}>
+                <About />
+              </React.Suspense>
+            }
+          />
           <Route
             path="products"
             element={
-              <ProductList
-                all_products={products}
-                handleDelete={(id) => handleDelete(id)}
-                incCartQuant={(id) => incCartQuant(id)}
-                decCartQuant={(id) => decCartQuant(id)}
-                cart={cart}
-              />
+              <React.Suspense fallback={<LoadingSign />}>
+                <ProductList
+                  all_products={products}
+                  handleDelete={(id) => handleDelete(id)}
+                  incCartQuant={(id) => incCartQuant(id)}
+                  decCartQuant={(id) => decCartQuant(id)}
+                  cart={cart}
+                />
+              </React.Suspense>
             }
           />
-          <Route path="blog" element={<Blog />} />
+          <Route
+            path="blog"
+            element={
+              <React.Suspense fallback={<LoadingSign />}>
+                <Blog />
+              </React.Suspense>
+            }
+          />
         </Routes>
       </main>
       <Cart

@@ -1,6 +1,7 @@
 import React from "react";
 import { palette } from "../elements/Palette";
 import Wave from "../elements/Wave";
+import AsyncImg from "../elements/AsyncImg";
 
 function AboutSection(props) {
   const { color, swatch, img, children } = props;
@@ -38,7 +39,7 @@ function AboutSection(props) {
 function About() {
   // Image on Right
   const img_1 = (
-    <img
+    <AsyncImg
       className="order-2"
       src="https://image.freepik.com/free-vector/people-holding-creative-ideas-icons_53876-59890.jpg"
       alt="sadf"
@@ -46,7 +47,7 @@ function About() {
   );
   // Image on Left
   const img_2 = (
-    <img
+    <AsyncImg
       className="order-2 lg:order-first"
       src="https://image.freepik.com/free-vector/people-holding-creative-ideas-icons_53876-59890.jpg"
       alt="sadf"

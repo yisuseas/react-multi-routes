@@ -20,9 +20,11 @@ function AsyncImg(props) {
   }, [props.src]);
 
   if (loadedSrc === props.src) {
+    console.log(props.className);
     return (
       <img
-        // className="w-full h-full"
+        // Once the image is loaded just render it.
+        className={props.className}
         src={props.src}
         alt={props.alt}
       />
@@ -33,7 +35,15 @@ function AsyncImg(props) {
       backgroundColor: c,
     };
 
-    return <div className="h-full w-full animate-pulse" style={s}></div>;
+    return (
+      <div
+        className={
+          // Display annimation and aditional classes
+          "h-full w-full animate-pulse " + props.className
+        }
+        style={s}
+      ></div>
+    );
   }
 }
 

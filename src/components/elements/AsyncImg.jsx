@@ -20,7 +20,6 @@ function AsyncImg(props) {
   }, [props.src]);
 
   if (loadedSrc === props.src) {
-    console.log(props.className);
     return (
       <img
         // Once the image is loaded just render it.

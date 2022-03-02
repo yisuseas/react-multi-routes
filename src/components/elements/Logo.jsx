@@ -4,8 +4,6 @@ function Logo() {
   return (
     <svg
       className="h-full"
-      // width="344.8mm"
-      // height="237.59mm"
       version="1.1"
       viewBox="0 0 344.8 237.59"
       xmlns="http://www.w3.org/2000/svg"

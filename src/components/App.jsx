@@ -13,7 +13,9 @@ import LoadingSign from "./elements/LoadingSign";
 import Home from "./pages/Home";
 const About = React.lazy(() => import("./pages/About"));
 const ProductList = React.lazy(() => import("./pages/ProductList"));
+const BlogWrapper = React.lazy(() => import("./pages/blog/BlogWrapper"));
 const Blog = React.lazy(() => import("./pages/blog/Blog"));
+const Post = React.lazy(() => import("./pages/blog/Post"));
 
 function App() {
   const [cart, setCart] = useState({});
@@ -99,10 +101,27 @@ function App() {
             path="blog"
             element={
               <React.Suspense fallback={<LoadingSign />}>
-                <Blog />
+                <BlogWrapper />
               </React.Suspense>
             }
-          />
+          >
+            <Route
+              path=""
+              element={
+                <React.Suspense fallback={<LoadingSign />}>
+                  <Blog />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path=":postSlug"
+              element={
+                <React.Suspense fallback={<LoadingSign />}>
+                  <Post />
+                </React.Suspense>
+              }
+            />
+          </Route>
         </Routes>
       </main>
       <Cart

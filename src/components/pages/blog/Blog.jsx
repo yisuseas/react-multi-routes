@@ -1,9 +1,12 @@
 import React from "react";
 import BlogSection from "./BlogSection";
+import { Link } from "react-router-dom";
 
 function Blog() {
   return (
     <article className="w-full">
+      <Link to="/blog/this-is-a-post-slug">Link :D</Link>
+      <Link to="/blog/this-is-another-post-slug">Another Link D:</Link>
       <BlogSection>
         <h1>This is a blog entry</h1>
         <h2>Another Subtitle</h2>

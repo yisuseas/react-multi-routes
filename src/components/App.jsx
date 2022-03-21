@@ -10,7 +10,7 @@ import Footer from "./layout/Footer";
 import { products } from "../test_response/products";
 import LoadingSign from "./elements/LoadingSign";
 
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
 const About = React.lazy(() => import("./pages/About"));
 const ProductList = React.lazy(() => import("./pages/ProductList"));
 const BlogWrapper = React.lazy(() => import("./pages/blog/BlogWrapper"));
@@ -72,7 +72,7 @@ function App() {
         toggleCartSideBar={() => toggleCartSideBar()}
         closeCartSideBar={() => closeCartSideBar()}
       />
-      <main className="w-full mt-32 lg:mt-24">
+      <main className="w-full mt-20 lg:mt-[62px]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
